@@ -14,6 +14,8 @@
     "lint:ci": "eslint --ext \".tsx,.ts\" --ignore-path .eslintignore .",
     "lint": "pnpm run lint:ci --max-warnings 0 --fix",
     "format": "prettier --write",
+    "commitlint": "commitlint --edit",
+    "commitizen": "exec < /dev/tty && git cz --hook || true",
     "prepare": "husky"
   },
   "dependencies": {
@@ -22,14 +24,23 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@commitlint/cli": "19.4.1",
+    "@commitlint/config-conventional": "19.4.1",
     "@fullstacksjs/eslint-config": "10.11.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "8.57.0",
     "husky": "9.1.5",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
     "typescript": "5.3.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
