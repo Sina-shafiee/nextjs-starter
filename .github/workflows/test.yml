@@ -5,14 +5,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
         with:
-          node-version: '20.x'
-          cache: 'npm'
+          version: 9.9.0
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        name: Install Node.js
+        with:
+          node-version: 20.17.0
+          cache: 'pnpm'
+
       - name: Install dependencies
         run: pnpm install
+
       - name: Run tests with coverage
         run: pnpm run coverage
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
