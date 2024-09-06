@@ -16,6 +16,8 @@
     "format": "prettier --write",
     "commitlint": "commitlint --edit",
     "commitizen": "exec < /dev/tty && git cz --hook || true",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "prepare": "husky"
   },
   "dependencies": {
@@ -36,7 +38,9 @@
     "husky": "9.1.5",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "vite-plugin-env-compatible": "2.0.1",
+    "vitest": "2.0.5"
   },
   "config": {
     "commitizen": {
