@@ -1,0 +1,32 @@
+{
+  "name": "nextjs-starter",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "email": "sinashafiee@hotmail.com",
+    "name": "Sina Shafiee",
+    "url": "https://github.com/sina-shafiee"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint:ci": "eslint --ext \".tsx,.ts\" --ignore-path .eslintignore .",
+    "lint": "pnpm run lint:ci --fix",
+    "format": "prettier --write"
+  },
+  "dependencies": {
+    "next": "14.2.8",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@fullstacksjs/eslint-config": "10.11.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "8.57.0",
+    "prettier": "3.3.3",
+    "typescript": "5.3.3"
+  }
+}
