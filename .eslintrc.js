@@ -6,6 +6,7 @@ module.exports = init({
     auto: true,
     esm: true,
     next: true,
+    storybook: true,
     typescript: {
       parserProject: ['./tsconfig.eslint.json'],
       resolverProject: ['./tsconfig.json'],

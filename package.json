@@ -18,7 +18,9 @@
     "commitizen": "exec < /dev/tty && git cz --hook || true",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@sentry/nextjs": "^8",
@@ -27,9 +29,18 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
     "@commitlint/cli": "19.4.1",
     "@commitlint/config-conventional": "19.4.1",
     "@fullstacksjs/eslint-config": "10.11.1",
+    "@storybook/addon-essentials": "8.3.0",
+    "@storybook/addon-interactions": "8.3.0",
+    "@storybook/addon-links": "8.3.0",
+    "@storybook/addon-onboarding": "8.3.0",
+    "@storybook/blocks": "8.3.0",
+    "@storybook/nextjs": "8.3.0",
+    "@storybook/react": "8.3.0",
+    "@storybook/test": "8.3.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -37,9 +48,11 @@
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.57.0",
+    "eslint-plugin-storybook": "0.8.0",
     "husky": "9.1.5",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
+    "storybook": "8.3.0",
     "typescript": "5.3.3",
     "vite-plugin-env-compatible": "2.0.1",
     "vitest": "2.0.5"
